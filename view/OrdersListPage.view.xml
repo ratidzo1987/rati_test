@@ -1,0 +1,102 @@
+<mvc:View 
+	id="navigation"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	controllerName="com.example.projectId.controller.OrdersListPage"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+    <Page>
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Button
+                        icon="sap-icon://nav-back"
+                        press="onNavBack"/>
+                </contentLeft>
+                <contentMiddle>
+                    <Title
+                        level="H2"
+                        text="{i18n>pageTitle}"/>
+                </contentMiddle> 
+            </Bar>    
+        </customHeader>
+        <subHeader>
+            <Toolbar>
+                <Button
+                    width="24%"
+                    type="Default"
+                    text="{i18n>AllButton}"
+                    press="onPressfilterAll"/>
+                <Button
+                    width="24%"
+                    type="Reject"
+                    text="{i18n>StatusButton1}"
+                    press="onPressfilter1"/>		  
+                <Button
+                    width="24%"
+                    type="Accept"
+                    text="{i18n>StatusButton2}"
+                    press="onPressfilter2"/>
+                <Button
+                    width="24%"
+                    type="Accept"
+                    text="{i18n>StatusButton3}"
+                    press="onPressfilter3"/>     
+            </Toolbar>
+        </subHeader>
+        <content>
+            <List
+                id="listid"
+                items="{oClientlist>/Lieferanten/}">
+                <ObjectListItem	
+                    title="{oClientlist>Text} - ({oClientlist>ID})"
+                    type="Active"
+                    press="onNavigationListItemPress">
+                    <attributes>
+                        <ObjectAttribute
+                            text="{oClientlist>PLZ} {oClientlist>ORT}" />
+                        <ObjectAttribute
+                            text="{oclientlist>Strasse} {oClientlist>HsNr}"/>
+                        <ObjectAttribute    
+                            text="{oClientlist>Ansprech01}"/>
+                    </attributes>    
+                </ObjectListItem>   
+            </List>
+         </content>    
+        <footer>
+            <Toolbar
+                class="pagefooter">
+                 <Text 
+                    text="Realcore 2019" />
+             </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>         
+       
+   
+            
+
+        
+       
+        
+
+
+        
+            
+                
+ 
+            
+
+
+
+
+
+
+
+
+
+
+            
+
+
+

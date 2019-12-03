@@ -1,0 +1,60 @@
+<mvc:View 
+	controllerName="com.example.projectId.controller.StartSeite"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	height="100%">
+	<Page title="{i18n>startSeitepagetitle}"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="handleNavBack"
+		enableScrolling="false"
+		class="titlesSpace" >
+		<customHeader>
+			<Bar>
+				<contentLeft>
+                    <Button
+                        icon="sap-icon://nav-back"
+                        press="onNavBack"/>       
+				</contentLeft>	  
+				<contentMiddle>
+				    <Title
+					    text="{i18n>startSeitepagetitle}"/>
+				</contentMiddle>
+                <contentRight>
+                    <Image
+					    src="images/realcore_logo.png"
+					    alt="RealCore Logo"
+					    height="30px"
+					    class="iconright"/>  
+                </contentRight>        	
+			</Bar>	
+		</customHeader>
+		<content>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                        header="{i18n>tileHeader1}"
+                        press="onPressToSplitApp">
+				<tileContent>		
+					<TileContent  
+						footer="Realcore 2019">
+						<content>
+							<ImageContent src="sap-icon://shipping-status"/>
+						</content>
+					</TileContent>
+				</tileContent>
+	        </GenericTile>
+            <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                        header="{i18n>tileHeader2}"
+                        press="onPressToMitarbeiterlist">
+				<tileContent>		
+					<TileContent  
+						footer="Realcore 2019">
+						<content>
+							<ImageContent src="sap-icon://customer-briefing" />
+						</content>
+					</TileContent>
+				</tileContent>
+	        </GenericTile>
+		</content>
+	</Page>
+</mvc:View>

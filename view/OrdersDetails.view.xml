@@ -1,0 +1,184 @@
+<mvc:View
+   id="detailsid"
+   controllerName="com.example.projectId.controller.OrdersDetails"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Page 
+        title="{i18n>ordersDetailsPageTitle}"
+        binding="{oClientlist>/}"
+        level="H2">
+        <customHeader>
+			<Bar>
+				<contentLeft>
+				    <Image
+					    src="images/realcore_logo.png"
+					    alt="RealCore Logo"
+					    height="30px"
+					    class="iconleft"/>
+                        
+				</contentLeft>	  
+				<contentMiddle>
+				    <Title
+					    text="{i18n>ordersDetailsPageTitle}"/>
+				</contentMiddle>  	
+			</Bar>	
+		</customHeader>
+        <content>
+            <HBox>
+                <Title
+                    text="{oDetailModel>/ID} - {oDetailModel>/Text}"
+                    level="H2"/>
+            </HBox>
+			<IconTabBar
+            id="idIconTabBarNoIcons"
+            expanded="{device>/isNoPhone}"
+            class="sapUiResponsiveContentPadding">
+            <items>
+            <IconTabFilter
+                text="{i18n>allBestellungen}">
+                <content>
+                <Table
+                    id="bestellungTable"
+                    fixedLayout="true"
+                    items="{oClientlist>/Bestellungen}">            
+                    <headerToolbar>         
+                        <Toolbar>      
+                            <content>
+                                <Title text="{i18n>tableHeading2}" level="H2"/> 
+                                <ToolbarSpacer />
+                            </content>               
+                        </Toolbar>   
+                    </headerToolbar>         
+                    <columns>        
+                        <Column
+                            width="11em">
+                            <Text text = "{i18n>idColumn}"/>
+                        </Column>
+                        <Column       
+                            width="11em">
+                            <Text text = "{i18n>datumColumn}"/>
+                        </Column>
+                        <Column
+                            width="11em">
+                            <Text text = "{i18n>lieferantIdColumn}"/>
+                        </Column>
+                        <Column
+                            width="11em">
+                            <Text text = "{i18n>auslieferungColumn}"/>
+                        </Column>
+                    </columns>    
+                    <items>      
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier
+                                title="{oClientlist>ID}"/>
+                                <Text text="{oClientlist>Datum}"/>
+                                <Text text="{oClientlist>LieferantID}"/>
+                                <Text text="{oClientlist>Auslieferung}"/>
+                        </cells>
+                    </ColumnListItem>
+                    </items>   
+                </Table>
+                </content>   
+            </IconTabFilter>
+            <IconTabFilter
+                text="{i18n>allArtikelliste}">
+                <Table
+                    id="artikelTable"
+                    fixedLayout="true"
+                    items="{oClientlist>/Artikelliste}">            
+                    <headerToolbar>         
+                        <Toolbar>      
+                            <content>
+                                <Title text="{i18n>tableHeading3}" level="H2"/> 
+                                <ToolbarSpacer />
+                                </content>               
+                        </Toolbar> 
+                        </headerToolbar>         
+                        <columns>        
+                            <Column
+                                width="11em">
+                                <Text text = "{i18n>idColumn}"/>
+                            </Column>
+                            <Column       
+                                width="11em">
+                                <Text text = "{i18n>artikelTextColumn}"/>
+                            </Column>
+                            <Column
+                                width="11em">
+                                <Text text = "{i18n>regionColumn}"/>
+                            </Column>
+                            <Column
+                                width="11em">
+                                <Text text = "{i18n>lieferantColumn}"/>
+                            </Column>
+                        </columns>
+                        <items>      
+                            <ColumnListItem>
+                                <cells>
+                                    <ObjectIdentifier
+                                        title="{oClientlist>ID}"/>
+                                    <Text text="{oClientlist>Artikeltext}"/>
+                                    <Text text="{oClientlist>Region}"/>
+                                    <Text text="{oClientlist>Lieferant}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>   
+                    </Table>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+        </content>         
+        <footer>
+            <Toolbar>
+                <Text 
+                    text="Realcore 2019" />
+            </Toolbar>
+        </footer>
+    </Page>        
+</mvc:View>                   
+         
+                    
+	                     
+                                        
+                                     	
+        	
+                
+                
+                
+                
+		
+                                   
+                           
+                    
+                          
+            
+            
+    
+
+         
+        
+        
+        
+           
+            
+         
+					            
+					            
+	                                                              
+                            
+        
+       
+        		
+	
+		
+				
+			
+		
+	        
+    
+	
+
+
+
+ 

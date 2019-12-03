@@ -1,0 +1,93 @@
+<mvc:View
+   id="mitarbeiterid"
+   controllerName="com.example.projectId.controller.Mitarbeiter"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+    <Page
+        binding="{oClientlist>/}"
+        level="H2">
+        <customHeader>
+			<Bar>
+				<contentLeft>
+                    <Button
+                        icon="sap-icon://nav-back"
+                        press="onNavBack"/>       
+				</contentLeft>	  
+				<contentMiddle>
+				    <Title
+					    text="{i18n>mitarbeiterPageTitle}"/>
+				</contentMiddle>
+                <contentRight>
+                    <Image
+					    src="images/realcore_logo.png"
+					    alt="RealCore Logo"
+					    height="30px"
+					    class="iconright"/>  
+                </contentRight>        	
+			</Bar>	
+		</customHeader>
+        <content>
+            <Table
+                id="allMitarbeiter4"
+                fixedLayout="true"
+                items="{oMitarbeiterList>/List}">            
+                <headerToolbar>         
+                    <Toolbar>      
+                        <content>
+                            <Title text="{i18n>tableHeading4}" level="H2"/> 
+                            <ToolbarSpacer />
+                            <Button
+                                width="10%"
+                                type="Accept"
+                                icon="sap-icon://refresh"
+                                press="readMitarbeiterList"/>
+                            <Button
+                                width="10%"
+                                type="Accept"
+                                icon="sap-icon://add"
+                                press="onClickAddButton"/>
+                        </content>       
+                    </Toolbar>                        
+                </headerToolbar>    
+                <columns>          
+                    <Column
+                        width="11em">
+                        <Text text = "{i18n>idColumn3}"/>
+                    </Column>
+                    <Column       
+                        width="11em">
+                        <Text text = "{i18n>VornameColumn}"/>
+                    </Column>
+                    <Column
+                        width="11em">
+                        <Text text = "{i18n>NachnameColumn}"/>
+                    </Column>
+                    <Column
+                        width="11em">
+                        <Text text = "{i18n>OrtColumn}"/>
+                    </Column>
+                </columns>
+                <items>      
+                <ColumnListItem
+                    type="Active"
+                    press="onItemListPress">       
+                    <cells>
+                        <ObjectIdentifier
+                            title="{oMitarbeiterList>ID}"/>
+                        <Text text="{oMitarbeiterList>Vorname}"/>
+                        <Text text="{oMitarbeiterList>Nachname}"/>
+                        <Text text="{oMitarbeiterList>Ort}"/>
+                    </cells>
+                </ColumnListItem>    
+                </items>   
+            </Table>    
+        </content>         
+        <footer>
+            <Toolbar>
+                <Text 
+                    text="Realcore 2019" />
+            </Toolbar>
+        </footer>
+   </Page>    
+</mvc:View>     
+    

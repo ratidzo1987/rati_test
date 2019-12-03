@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="design/images/favicon.ico" type="image/x-icon" />
+		<meta name="format-detection" content="telephone=no"/>
+		<title>SAPUI5 Application Template</title>
+		<!-- <script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" -->
+		<script src="https://sapui5.hana.ondemand.com/1.44.15/resources/sap-ui-core.js"
+			id="sap-ui-bootstrap"
+			data-sap-ui-libs="sap.m, sap.ui.core, sap.ui.layout"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-ignoreUrlParams="true"
+			data-sap-ui-xx-componentPreload="off"
+			data-sap-ui-resourceroots='{
+				"com.example.projectId": "./"
+			}'>
+
+		</script>
+		<script>
+			
+			sap.ui.getCore().attachInit(function() 
+			{
+				sap.ui.require([
+					"sap/m/Shell",
+					"sap/ui/core/ComponentContainer"
+				], function (Shell, ComponentContainer) 
+				{
+
+					var oCompContainer = new ComponentContainer({
+						height : "100%"
+					});
+					
+					new Shell({
+						app: oCompContainer,
+						appWidthLimited : true,
+						showLogout: false
+					}).placeAt("applicationContent");					
+
+					var oComponent = sap.ui.component({
+						name:"com.example.projectId",
+						manifestFirst: true,
+						async: true
+					}).then(function(oComponent){
+						oCompContainer.setComponent(oComponent);
+					});
+				})
+			});
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="applicationContent"></div>
+	</body>
+</html>

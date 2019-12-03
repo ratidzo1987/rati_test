@@ -1,0 +1,69 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" >
+   <Dialog 
+      title="{=${data>/ID} === '' ? 'Neue Mitarbeiter hinzufügen' : 'Mitarbeiter Info bearbeiten'}">
+      <content>
+         <f:SimpleForm
+            minWidth="1024"
+            maxContainerCols="2"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            labelSpanL="3"
+            labelSpanM="3"
+            emptySpanL="4"
+            emptySpanM="4"
+            columnsL="1"
+            columnsM="1">
+            <f:content>
+               <Label 
+                  text="ID" 
+                  visible="{=${data>/ID} === '' ? false : true}"/>
+               <Input 
+                  id="inputID2"
+                  type="Text"
+                  value="{data>/ID}"
+                  placeholder="" 
+                  visible="{=${data>/ID} === '' ? false : true}"/>
+               <Label text="Vorname" />
+               <Input 
+                  type="Text"
+                  id="inputVorname2"
+                  value="{data>/Vorname}"
+                  placeholder=""  />
+               <Label text="Nachnahme" />
+               <Input 
+                  type="Text"
+                  id="inputNachname2"
+                  value="{data>/Nachname}"
+                  placeholder=""  />
+               <Label text="Ort" />
+               <Input 
+                  type="Text"
+                  id="inputOrt2"
+                  value="{data>/Ort}"
+                  placeholder="" />
+            </f:content>   
+         </f:SimpleForm>
+      </content>
+      <buttons>
+         <Button
+            width="25%"
+            type="Reject"
+            text="{i18n>deleteButton}"
+            visible="{=${data>/ID} === '' ? false : true}"
+            press="onDeleteMitarbeiterList"/>
+         <Button
+            width="25%"
+            type="Accept"
+            text="{i18n>saveButton}"
+            press="onSaveMitarbeiterList"/>   
+         <Button
+            width="25%"
+            type="Reject"
+            text="{i18n>cancelButton}"
+            press="onMitarbeiterDialogClose"/>  
+      </buttons>
+   </Dialog>
+</core:FragmentDefinition>        

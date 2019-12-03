@@ -1,0 +1,146 @@
+{
+	"Lieferanten": [
+	  {
+	    "ID": "0815",
+	    "Text": "Paul Müller GmbH",
+	    "PLZ": "12345",
+	    "ORT": "Musterstadt",
+	    "Strasse": "Hauptstraße",
+		"HsNr": "88",
+	    "Ansprech01": "Fr. Peter",
+		"Status": "2"
+	  },{
+	    "ID": "1234",
+	    "Text": "Störtebecker KG & Co KG",
+	    "PLZ": "87654",
+	    "ORT": "Hamburg",
+	    "Strasse": "Alsterwinkel",
+		"HsNr": "7",
+	    "Ansprech01": "Hr. Hinnack",
+		"Status": "1"
+	  },{
+	    "ID": "9999",
+	    "Text": "Bauer Paul",
+	    "PLZ": "89012",
+	    "ORT": "Neustadt",
+	    "Strasse": "Kleine Allee",
+		"HsNr": "123",
+	    "Ansprech01": "Hr. Meier",
+		"Status": "3"
+	  }
+	],
+	"aktLieferant":[
+	
+	],
+    "Bestellungen": [
+	  {
+	    "ID": "1",
+	    "Datum": "02.11.2018",
+	    "LieferantID": "0815",
+	    "Auslieferung": "18.11.2018"
+	  },{
+	    "ID": "2",
+	    "Datum": "27.10.2018",
+	    "LieferantID": "0815",
+	    "Auslieferung": "08.11.2018"
+	  },{
+	    "ID": "3",
+	    "Datum": "04.11.2018",
+	    "LieferantID": "9999",
+	    "Auslieferung": "13.11.2018"
+	  },{
+	    "ID": "4",
+	    "Datum": "16.10.2018",
+	    "LieferantID": "1234",
+	    "Auslieferung": "13.11.2018"
+	  },{
+	    "ID": "5",
+	    "Datum": "02.11.2018",
+	    "LieferantID": "9999",
+	    "Auslieferung": "08.11.2018"
+	  }
+  ],
+  "Artikelliste": [
+	  {
+	    "ID": "1",
+		"Artikel": "10002810",
+	    "Artikeltext": "Banane gerade",
+	    "Region": "West",
+	    "Lieferant": "0815",
+	    "Gültig ab": "20170701",
+	    "Gültig bis": "20170715",
+	    "Status": "1",
+	    "Notizen": "Dies ist eine Notiz"
+	  },{
+	    "ID": "2",
+		"Artikel": "10002812",
+	    "Artikeltext": "Kirschen sauer",
+	    "Region": "Ost",
+	    "Lieferant": "0815",
+	    "Gültig ab": "20170701",
+	    "Gültig bis": "20170715",
+	    "Status": "2",
+	    "Notizen": "Dies ist eine Notiz"
+	  },{
+	    "ID": "3",
+		"Artikel": "10002813",
+	    "Artikeltext": "Pflaume gelb",
+	    "Region": "Ost",
+	    "Lieferant": "9999",
+	    "Gültig ab": "20170701",
+	    "Gültig bis": "20170715",
+	    "Status": "2",
+	    "Notizen": "Dies ist eine Notiz"
+	  },{
+	    "ID": "4",
+		"Artikel": "10002814",
+	    "Artikeltext": "Apfel rot",
+	    "Region": "National",
+	    "Lieferant": "9999",
+	    "Gültig ab": "20170601",
+	    "Gültig bis": "20170704",
+	    "Status": "1",
+	    "Notizen": "Beispieltext 01"
+	  },{
+	    "ID": "5",
+		"Artikel": "10002819",
+	    "Artikeltext": "frischer Mehnkuchen",
+	    "Region": "National",
+	    "Lieferant": "0815",
+	    "Gültig ab": "20170601",
+	    "Gültig bis": "20170704",
+	    "Status": "1",
+	    "Notizen": "ganz frisch"
+	  },{
+	    "ID": "6",
+		"Artikel": "10002815",
+	    "Artikeltext": "Banane krumm",
+	    "Region": "Ost",
+	    "Lieferant": "1234",
+	    "Gültig ab": "20170701",
+	    "Gültig bis": "20170715",
+	    "Status": "2",
+	    "Notizen": "Dies ist eine Notiz"
+	  },{
+	    "ID": "7",
+		"Artikel": "10002816",
+	    "Artikeltext": "Apfel grün",
+	    "Region": "Ost",
+	    "Lieferant": "1234",
+	    "Gültig ab": "20170301",
+	    "Gültig bis": "20170430",
+	    "Status": "1",
+	    "Notizen": "schlechtere Qualität"
+	  },{
+	    "ID": "8",
+		"Artikel": "10002817",
+	    "Artikeltext": "Kiwi gelb",
+	    "Region": "West",
+	    "Lieferant": "1234",
+	    "Gültig ab": "20170101",
+	    "Gültig bis": "20171231",
+	    "Status": "3",
+	    "Notizen": "ganz frisch"
+	  }
+  ]  
+}

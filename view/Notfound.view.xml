@@ -1,0 +1,26 @@
+<mvc:View 
+	controllerName="com.example.projectId.controller.Notfound"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	height="100%">
+	<Page
+		class="titlespace"
+		title="{i18n>NotFound}"
+		text="{i18n>NotFound.text}"
+		enableScrolling="false"
+		showNavButton="true"
+		navButtonPress="handleNavBack"/>
+</mvc:View>
+
+
+
+
+
+
+
+
+
+
+
